@@ -8,4 +8,5 @@ from scrapy.item import Item, Field
 class BaiduItem(Item):
     # define the fields for your item here like:
     # name = Field()
+    lyric = Field()
     pass

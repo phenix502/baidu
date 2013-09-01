@@ -1,0 +1,22 @@
+#!/usr/bin/python
+#-*-coding:utf-8-*-
+from scrapy.spider import BaseSpider
+from scrapy.selector import HtmlXPathSelector
+
+from baidu.items import BaiduItem
+
+import re
+
+class SweetCrawler(CrawlSpider):
+	name = "sweet"
+	allowed_domains = ["music.baidu.com"]
+	start_urls = ["http://music.baidu.com/tag/%E7%94%9C%E8%9C%9C"]
+	
+        
+	def parse_lyric(self, response):
+		hxs = HtmlXPathSelector(response)
+		item = BaiduItem()
+		lyric = hxs.select('//*[@id="lyricCont"]').extract()[0]
+		print lyric 
+
+		 
