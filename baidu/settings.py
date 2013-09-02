@@ -11,5 +11,11 @@ BOT_NAME = 'baidu'
 SPIDER_MODULES = ['baidu.spiders']
 NEWSPIDER_MODULE = 'baidu.spiders'
 
+MONGODB_SERVER = "localhost"
+MONGODB_PORT = 27017
+MONGODB_DB = "mydb"
+MONGODB_COLLECTION = "song_sweet"
+ITEM_PIPELINES = ['baidu.pipelines.BaiduPipeline',]
+
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'baidu (+http://www.yourdomain.com)'
