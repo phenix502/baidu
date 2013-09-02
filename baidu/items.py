@@ -9,4 +9,7 @@ class BaiduItem(Item):
     # define the fields for your item here like:
     # name = Field()
     lyric = Field()
+    hot = Field()
+    singer = Field()
+    songName = Field()
     pass
