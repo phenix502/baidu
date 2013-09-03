@@ -14,7 +14,7 @@ NEWSPIDER_MODULE = 'baidu.spiders'
 MONGODB_SERVER = "localhost"
 MONGODB_PORT = 27017
 MONGODB_DB = "mydb"
-MONGODB_COLLECTION = "song_sweet"
+MONGODB_COLLECTION = "song_sad"
 ITEM_PIPELINES = ['baidu.pipelines.BaiduPipeline',]
 
 # DOWNLOAD_DELAY = 3

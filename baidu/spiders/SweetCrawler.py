@@ -11,12 +11,12 @@ from baidu.items import BaiduItem
 import re
 
 class sweetCrawler(CrawlSpider):
-	name = "sweet"
+	name = "sad"
 	allowed_domains = ["music.baidu.com"]
 	num = range(0, 1000, 50)
 	start_urls = []
 	for i in num:
-		urls = "http://music.baidu.com/tag/%E7%94%9C%E8%9C%9C?start={0}&size=50".format(i)
+		urls = "http://music.baidu.com/tag/%E4%BC%A4%E6%84%9F?start={0}&size=50".format(i)
 	# start_urls = ["http://music.baidu.com/tag/%E7%94%9C%E8%9C%9C"]
 		start_urls.append(urls)
 
