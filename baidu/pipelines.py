@@ -18,6 +18,9 @@ class BaiduPipeline(object):
                 self.collection = db[settings['MONGODB_COLLECTION']]
 
         def process_item(self, item, spider):
+
+                print item['songName']
+                print '\n'
                 self.collection.insert(dict(item))
                 log.msg("Item wrote to MongoDB database %s/%s" %
                     (settings['MONGODB_DB'], settings['MONGODB_COLLECTION']),
