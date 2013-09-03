@@ -2,6 +2,7 @@
 #-*-coding:utf-8-*-
 from scrapy.spider import BaseSpider
 from scrapy.selector import HtmlXPathSelector
+
 from scrapy.contrib.spiders import CrawlSpider, Rule
 from scrapy.contrib.linkextractors.sgml import SgmlLinkExtractor
 
@@ -21,11 +22,13 @@ class sweetCrawler(CrawlSpider):
 
 	rules = (
 
-                # allow in
-        Rule(SgmlLinkExtractor(allow= ('.+/tag/%E7%94%9C%E8%9C%9C.+$') ), ),
-        Rule(SgmlLinkExtractor(allow= ('music\.baidu\.com/song/.+',)),callback = 'parse_lyric'),
-        
-		)
+    
+		Rule(SgmlLinkExtractor(allow=[r'music\.baidu\.com/song/[0-9]+']),callback = 'parse_lyric'),
+
+		
+		
+	)
+
 		
 
         

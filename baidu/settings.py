@@ -17,7 +17,7 @@ MONGODB_DB = "mydb"
 MONGODB_COLLECTION = "song_sweet"
 ITEM_PIPELINES = ['baidu.pipelines.BaiduPipeline',]
 
-DOWNLOAD_DELAY = 3
+# DOWNLOAD_DELAY = 3
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'baidu (+http://www.yourdomain.com)'
